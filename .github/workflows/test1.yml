@@ -1,0 +1,32 @@
+
+
+name: learn github actions
+
+
+    on:
+      push:
+        branch: [ "main" ]
+      pull_request:
+        branch: ["main"]
+
+      workfolw_dispatch:
+
+      jobs:
+
+       build:
+        runs-on: ubuntu-latest
+
+        steps:
+
+         - uses: actions/checkout@v4
+
+
+         env:
+           a:"tell"
+
+         - name: shell script-1
+           run: echo "Hi, welcpme to the github actions"
+
+
+          - name: shell-2
+            run: hi &{a}
